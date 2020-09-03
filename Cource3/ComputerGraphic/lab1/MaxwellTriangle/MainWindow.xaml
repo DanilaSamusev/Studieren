@@ -1,0 +1,22 @@
+﻿<Window x:Class="MaxwellTriangle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaxwellTriangle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="550">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="ImageBox" Width="490" Height="490" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Label Height="30" VerticalAlignment="Center" Margin="5">Длина стороны треугольника:</Label>
+            <TextBox Margin="5" Width="50" Height="30" x:Name="triangleSizeTextBox"/>
+            <Button x:Name="CreateTriangleButton" Height="30" Margin="5" Padding="2" Click="CreateTriangleButton_Click">Создать</Button>
+        </StackPanel>
+    </Grid>
+</Window>
