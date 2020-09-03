@@ -53,6 +53,7 @@ namespace MaxwellTriangle
         private bool IsPixelInTriangle(int x, int y)
         {
             double tan60 = Math.Tan(Math.PI / 3);
+
             try
             {
                 double first = (double)(imageHeight - y) / (double)x;
