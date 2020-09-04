@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lab2
+﻿namespace Lab2
 {
     public class Matrix
     {
         private double[,] _matrix;
+
+        public double[,] MatrixProperty
+        {
+            get => _matrix;
+            set => _matrix = value;
+        }
+
+        public double this[int row, int column]
+        {
+            get => _matrix[row, column];
+            set => _matrix[row, column] = value;
+        }
 
         public Matrix()
         {
@@ -31,32 +39,49 @@ namespace Lab2
             _matrix = matrix;
         }
 
-        private void InitializeMatrix()
+        public void ChangeMatrix()
         {
-            double element = 1;
-
-            for (var row = 0; row < _matrix.GetLength(1); row++)
-            {
-                for (var column = 0; column < _matrix.GetLength(0); column++)
-                {
-                    _matrix[row, column] = element;
-                    element++;
-                }
-            }
-        }
-
-        private void ChangeMatrix()
-        {
-            for (var row = 0; row < _matrix.GetLength(1); row++)
+            for (var row = 0; row < _matrix.GetLength(0); row++)
             {
                 double max = FindMaxInRow(row);
 
                 if (max != 0)
                 {
-                    for (var column = 1; column < _matrix.GetLength(1); column++)
+                    for (var column = 0; column < _matrix.GetLength(1); column++)
                     {
                         _matrix[row, column] /= max;
                     }
+                }
+            }
+        }
+
+        public string GetMatrixAsString()
+        {
+            string result = string.Empty;
+
+            for (var row = 0; row < _matrix.GetLength(0); row++)
+            {
+                for (var column = 0; column < _matrix.GetLength(1); column++)
+                {
+                    result += $"{_matrix[row, column]}  ";
+                }
+
+                result += "\n";
+            }
+
+            return result;
+        }
+
+        private void InitializeMatrix()
+        {
+            double element = 1;
+
+            for (var row = 0; row < _matrix.GetLength(0); row++)
+            {
+                for (var column = 0; column < _matrix.GetLength(1); column++)
+                {
+                    _matrix[row, column] = element;
+                    element++;
                 }
             }
         }
@@ -65,7 +90,7 @@ namespace Lab2
         {
             double max = _matrix[row, 0];
 
-            for (var column = 1; column < _matrix.GetLength(1) - 1; column++)
+            for (var column = 0; column < _matrix.GetLength(1); column++)
             {
                 double currentElement = _matrix[row, column];
 
