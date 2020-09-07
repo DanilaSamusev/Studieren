@@ -14,6 +14,7 @@ namespace lab2_Ostapenko
 
         public RealArray()
         {
+            _matrix = new double[3, 3];
         }
 
         public RealArray(double[,] matrix)
@@ -77,7 +78,7 @@ namespace lab2_Ostapenko
             {
                 for (var column = 0; column < _matrix.GetLength(1); column++)
                 {
-                    arrauString += $"\t{_matrix[line, column]}";
+                    arrauString += $"\t{_matrix[line, column]:f2}";
                 }
 
                 arrauString += "\n";
