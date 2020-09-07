@@ -19,14 +19,14 @@ namespace lab2_Ostapenko
             _matrix = matrix;
         }
 
-        public RealArray(int decimOne, int decimTwo)
+        public RealArray(int dimensionOne, int dimensionTwo)
         {
-            _matrix = new double[decimOne, decimTwo];
+            _matrix = new double[dimensionOne, dimensionTwo];
         }
 
-        public RealArray(int decim)
+        public RealArray(int dimension)
         {
-            _matrix = new double[decim, decim];
+            _matrix = new double[dimension, dimension];
         }
 
         public double this[int index1, int index2]
@@ -43,7 +43,28 @@ namespace lab2_Ostapenko
 
         public int GetColumnsStartsWithNegativesNumber()
         {
-            return 1;
+            int counter = 0;
+            int line = 0;
+            for (int column = 0; column < _matrix.GetLength(1); column++)
+            {
+                if (_matrix[line, column] < 0)
+                {
+                    counter++;
+                }
+            }
+            return counter;
+        }
+
+        public void MakeAllElementsRandomWithInterval(int leftLimit, int rightLimit)
+        {
+            var random = new Random();
+            for (int line = 0; line < _matrix.GetLength(0); line++)
+            {
+                for (int column = 0; column < _matrix.GetLength(1); column++)
+                {
+                    _matrix[line, column] = random.NextDouble() * (rightLimit - leftLimit) + leftLimit;
+                }
+            }
         }
     }
 }
