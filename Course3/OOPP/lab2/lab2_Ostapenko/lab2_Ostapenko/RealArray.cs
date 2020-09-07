@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace lab2_Ostapenko
 {
@@ -8,7 +6,11 @@ namespace lab2_Ostapenko
     {
         private double[,] _matrix;
 
-        public double[,] Matrix { get => _matrix; set => _matrix = value; }
+        public double[,] Matrix 
+        {
+            get => _matrix; 
+            set => _matrix = value; 
+        }
 
         public RealArray()
         {
@@ -65,6 +67,23 @@ namespace lab2_Ostapenko
                     _matrix[line, column] = random.NextDouble() * (rightLimit - leftLimit) + leftLimit;
                 }
             }
+        }
+
+        public string GetArrayAsString()
+        {
+            string arrauString = string.Empty;
+
+            for (var line = 0; line < _matrix.GetLength(0); line++)
+            {
+                for (var column = 0; column < _matrix.GetLength(1); column++)
+                {
+                    arrauString += $"\t{_matrix[line, column]}";
+                }
+
+                arrauString += "\n";
+            }
+
+            return arrauString;
         }
     }
 }
