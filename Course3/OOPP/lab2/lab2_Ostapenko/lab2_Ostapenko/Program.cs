@@ -33,6 +33,12 @@ namespace lab2_Ostapenko
             Console.WriteLine();
 
             Console.WriteLine($"Number of columns starts with negatives: {array4.GetColumnsStartsWithNegativesNumber()}");
+            Console.WriteLine();
+
+            var random = new Random();
+            int line = random.Next(array4.Matrix.GetLength(0));
+            int column = random.Next(array4.Matrix.GetLength(1));
+            Console.WriteLine($"Element ({line + 1};{column + 1}) is {array4[line, column]:f2}");
         }   
     }
 }
