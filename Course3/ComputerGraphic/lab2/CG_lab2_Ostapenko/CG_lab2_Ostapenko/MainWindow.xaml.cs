@@ -16,6 +16,8 @@ namespace CG_lab2_Ostapenko
 
         private Figure rhombus;
 
+        delegate bool ConditionCheker();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,31 +31,71 @@ namespace CG_lab2_Ostapenko
             }
             catch
             {
-                _imageHeight = _imageWidth = 1000;
+                _imageHeight = _imageWidth = 500;
             }
 
-            var bitmap = new WriteableBitmap(_imageWidth, _imageHeight, 96, 96, PixelFormats.Bgr32, null);
+            var bitmap = new WriteableBitmap(_imageWidth + 10, _imageHeight + 10, 96, 96, PixelFormats.Bgr32, null);
             ImageBox.Source = bitmap;
 
             CreateFigure();
 
             for (int index = 0; index < rhombus.Lines.Length; index++)
             {
-                err = - 1 / 2;
+                err = -(1.0 / 2.0);
                 double delta = (double)Math.Abs(rhombus.Lines[index].Y1 - rhombus.Lines[index].Y2) / (double)Math.Abs(rhombus.Lines[index].X1 - rhombus.Lines[index].X2);
 
-                int y = (int)rhombus.Lines[index].Y1;
-                int x = (int)rhombus.Lines[index].X1;
+                int y = 0;
+                double y2 = 0;
 
-                while (y < rhombus.Lines[index].Y2 && x < rhombus.Lines[index].X2)
+                int x = 0;
+                double x2 = 0;
+
+                if ((int)rhombus.Lines[index].X1 < rhombus.Lines[index].X2)
                 {
-                    FillPixel(bitmap, x, y);
+                    x = (int)rhombus.Lines[index].X1;
+                    x2 = rhombus.Lines[index].X2;
+                    y = (int)rhombus.Lines[index].Y1;
+                    y2 = rhombus.Lines[index].Y2;
+                }
+                else
+                {
+                    x2 = rhombus.Lines[index].X1;
+                    x = (int)rhombus.Lines[index].X2;
+                    y2 = rhombus.Lines[index].Y1;
+                    y = (int)rhombus.Lines[index].Y2;
+                }
+
+                ConditionCheker isLineEnded;
+                int yCrement = 0;
+
+                if (y > y2)
+                {
+                    isLineEnded = () => y < y2 && x > x2;
+                    yCrement = -1;
+                }
+                else
+                {
+                    isLineEnded = () => y > y2 && x > x2;
+                    yCrement = 1;
+                }
+
+                while (!isLineEnded())
+                {
+                    try
+                    {
+                        FillPixel(bitmap, x, y);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        break;
+                    }
 
                     err += delta;
                     if (err > 0)
                     {
-                        y++;
-                        err -= 1;
+                        y += yCrement;
+                        err--;
                     }
 
                     x++;
