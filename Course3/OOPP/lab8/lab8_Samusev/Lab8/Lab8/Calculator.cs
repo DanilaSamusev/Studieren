@@ -39,7 +39,5 @@ namespace Lab8
 
             return CalculateFunction(A0, Anr, r);
         }
-
-
     }
 }
