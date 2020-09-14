@@ -4,32 +4,42 @@ namespace lab1_Ostapenko
 {
     public class Table
     {
-        private string _name;
-        private double _square;
+        private string name;
+        private double square;
 
-        public string Name { get => _name; set => _name = value; }
-        public double Square { get => _square; set => _square = value; }
+        public string Name { get => name; set => name = value; }
+        public double Square
+        {
+            get => square;
+            set
+            {
+                if (value > 0)
+                {
+                    square = value;
+                }
+            }
+        }
 
         public Table()
         {
-            _name = "DefaultTable";
-            _square = 10000;
+            name = "DefaultTable";
+            square = 10000;
         }
 
         public Table(string name, double square)
         {
-            _name = name;
-            _square = square;
+            this.name = name;
+            this.square = square;
         }
 
         public double GetPrice()
         {
-            return Math.Pow(_square, 2) / 3 + 500000;
+            return Math.Pow(square, 2) / 3 + 500000;
         }
 
         public string GetFields()
         {
-            return $"Стол {_name} с площадью {_square} см кв.";
+            return $"Стол {name} с площадью {square} см кв.";
         }
     }
 }
