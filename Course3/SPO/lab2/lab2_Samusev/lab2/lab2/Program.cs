@@ -19,7 +19,7 @@ namespace lab2
             mt2.thrd.Start ();
             mt3.thrd.Start (); 
             
-            mtl. thrd. Join() ;
+            mtl.thrd.Join() ;
             mt2.thrd.Join () ;
             mt3.thrd.Join () ;
             
