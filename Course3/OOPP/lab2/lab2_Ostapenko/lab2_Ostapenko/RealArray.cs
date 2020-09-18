@@ -36,11 +36,27 @@ namespace lab2_Ostapenko
         {
             get
             {
-                return _matrix[index1, index2];
+                if (index1 >= 0 && 
+                    index2 >= 0 &&
+                    index1 < _matrix.GetLength(0) &&
+                    index2 < _matrix.GetLength(1))
+                {
+                    return _matrix[(int)index1, (int)index2];
+                }
+                else
+                {
+                    return 0;
+                }
             }
             set
             {
-                _matrix[index1, index2] = value;
+                if (index1 >= 0 &&
+                    index2 >= 0 &&
+                    index1 < _matrix.GetLength(0) &&
+                    index2 < _matrix.GetLength(1))
+                {
+                    _matrix[(int)index1, (int)index2] = value;
+                }
             }
         }
 
