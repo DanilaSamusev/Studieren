@@ -11,7 +11,7 @@ namespace Lab6_Server
         static void Main(string[] args)
         {
             Process pipeClient = new Process();
-            pipeClient.StartInfo.FileName = @"F:\MyWorks\Учёба\Studieren\Course3\SPO\lab6\Lab6_Samusev\Lab6\Lab6_Client\bin\Debug\netcoreapp3.0\Lab6_Client.exe";
+            pipeClient.StartInfo.FileName = @"D:\Studieren\Course3\SPO\lab6\Lab6_Samusev\Lab6\Lab6_Client\bin\Debug\netcoreapp3.0\Lab6_Client.exe";
             using (AnonymousPipeServerStream pipeServer =
                 new AnonymousPipeServerStream(PipeDirection.Out,
                     HandleInheritability.Inheritable))
