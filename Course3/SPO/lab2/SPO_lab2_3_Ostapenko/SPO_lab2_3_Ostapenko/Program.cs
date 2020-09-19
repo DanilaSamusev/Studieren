@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 
 namespace SPO_lab2_3_Ostapenko
 {
@@ -13,13 +12,11 @@ namespace SPO_lab2_3_Ostapenko
             var thread3 = new MyThread("Thread3", countLimit);
             var thread4 = new MyThread("Thread4", countLimit);
 
-            // Устанавливаем приоритеты.
             thread1.thread.Priority += 1;
             thread2.thread.Priority += 1;
             thread3.thread.Priority -= 1;
             thread4.thread.Priority -= 2;
 
-            // Запускаем потоки на выполнение. 
             thread1.thread.Start();
             thread2.thread.Start();
             thread3.thread.Start();
