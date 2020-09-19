@@ -30,7 +30,6 @@ namespace SPO_lab2_3_Ostapenko
             set => _countLimit = value;
         }
 
-        // Создаем новый поток. Обратите внимание на то, что этот конструктор в действительности не запускает потоки на выполнение.
         public MyThread(string name, int countLimit)
         {
             Count = 0;
@@ -41,8 +40,6 @@ namespace SPO_lab2_3_Ostapenko
             _currentName = name;
             CountLimit = countLimit;
         }
-
-        // Начинаем выполнение нового потока.
 
         private void Run()
         {
