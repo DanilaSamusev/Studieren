@@ -126,43 +126,43 @@ namespace CG_lab2_Ostapenko
             {
                 new Line(
                     0, 
-                    _imageHeight / 3 * 2, 
+                    _imageHeight / 5 * 3, 
                     0, 
-                    _imageHeight / 3),
+                    _imageHeight / 5 * 2),
 
                 new Line(
                     0,
-                    _imageHeight / 3,
+                    _imageHeight / 5 * 2,
+                    _imageWidth / 4 * 3,
+                    _imageHeight / 5 * 2),
+
+                new Line(
+                    0,
+                    _imageHeight / 5 * 3,
+                    _imageWidth / 4 * 3,
+                    _imageHeight / 5 * 3),
+
+                new Line(
+                    _imageWidth / 4 * 3,
+                    _imageHeight / 5 * 2,
                     _imageWidth / 4 * 3,
                     _imageHeight / 3),
 
                 new Line(
-                    0,
-                    _imageHeight / 3 * 2,
+                    _imageWidth / 4 * 3,
+                    _imageHeight / 5 * 3,
                     _imageWidth / 4 * 3,
                     _imageHeight / 3 * 2),
 
                 new Line(
                     _imageWidth / 4 * 3,
-                    _imageHeight / 3,
-                    _imageWidth / 4 * 3,
-                    0),
-
-                new Line(
-                    _imageWidth / 4 * 3,
                     _imageHeight / 3 * 2,
-                    _imageWidth / 4 * 3,
-                    _imageHeight),
-
-                new Line(
-                    _imageWidth / 4 * 3,
-                    _imageHeight,
                     _imageWidth,
                     _imageHeight / 2),
 
                  new Line(
                     _imageWidth / 4 * 3,
-                    0,
+                    _imageHeight / 3,
                     _imageWidth,
                     _imageHeight / 2)
             };
