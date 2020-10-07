@@ -44,11 +44,10 @@ namespace CG_lab2_Ostapenko
                 err = -(1.0 / 2.0);
                 double delta = (double)Math.Abs(rhombus.Lines[index].Y1 - rhombus.Lines[index].Y2) / (double)Math.Abs(rhombus.Lines[index].X1 - rhombus.Lines[index].X2);
 
-                int y = 0;
-                double y2 = 0;
-
-                int x = 0;
-                double x2 = 0;
+                int y;
+                double y2;
+                int x;
+                double x2;
 
                 if ((int)rhombus.Lines[index].X1 < rhombus.Lines[index].X2)
                 {
@@ -66,8 +65,9 @@ namespace CG_lab2_Ostapenko
                 }
 
                 ConditionCheker isLineEnded;
-                int yCrement = 0;
+                
                 int xCrement = 1;
+                int yCrement;
 
                 if (x == x2)
                 {
