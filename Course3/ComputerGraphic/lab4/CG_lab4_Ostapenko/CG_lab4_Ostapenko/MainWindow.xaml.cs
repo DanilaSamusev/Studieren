@@ -29,35 +29,64 @@ namespace CG_lab4_Ostapenko
             }
             catch
             {
-                _imageSideLength = 500;
+                _imageSideLength = 300;
             }
 
             bitmap = new WriteableBitmap(_imageSideLength + 10, _imageSideLength + 10, 96, 96, PixelFormats.Bgr32, null);
             ImageBox.Source = bitmap;
 
-            DrawEllipse(_imageSideLength / 2, _imageSideLength / 3, _imageSideLength / 5, _imageSideLength / 11 * 5, Quarter.Third, Quarter.Fourth);
-            DrawEllipse(_imageSideLength / 8 * 3, _imageSideLength / 3, _imageSideLength / 5, _imageSideLength / 11 * 5, Quarter.Third, Quarter.Fourth);
+            DrawEllipse(_imageSideLength / 12 * 5, _imageSideLength / 3, _imageSideLength / 4, _imageSideLength / 2, Quarter.Third);
+            DrawEllipse(_imageSideLength / 12 * 7, _imageSideLength / 3, _imageSideLength / 4, _imageSideLength / 2, Quarter.Third);
+
+            DrawEllipse(_imageSideLength / 12 * 7, _imageSideLength / 2, _imageSideLength / 4, _imageSideLength / 3, Quarter.Fourth);
+            DrawEllipse(_imageSideLength / 12 * 5, _imageSideLength / 2, _imageSideLength / 4, _imageSideLength / 3, Quarter.Fourth);
+
             DrawLine(new Line
             {
-                X1 = _imageSideLength * 0.5,
-                Y1 = _imageSideLength * 0.79,
-                X2 = _imageSideLength * 0.37,
-                Y2 = _imageSideLength * 0.79
-            });
-            DrawLine(new Line
-            {
-                X1 = _imageSideLength / 10 * 3 - 1,
+                X1 = _imageSideLength / 6,
                 Y1 = _imageSideLength / 3,
-                X2 = _imageSideLength / 40 * 7 + 2,
+                X2 = _imageSideLength / 3,
                 Y2 = _imageSideLength / 3
             });
 
             DrawLine(new Line
             {
-                X1 = _imageSideLength / 10 * 3 - 1,
+                X1 = _imageSideLength / 12 * 5,
+                Y1 = _imageSideLength / 6 * 5,
+                X2 = _imageSideLength / 12 * 7,
+                Y2 = _imageSideLength / 6 * 5
+            });
+
+            DrawLine(new Line
+            {
+                X1 = _imageSideLength / 4 * 3,
                 Y1 = _imageSideLength / 3,
-                X2 = _imageSideLength / 40 * 7 + 2,
-                Y2 = _imageSideLength / 3
+                X2 = _imageSideLength / 12 * 11,
+                Y2 = _imageSideLength / 2
+            });
+
+            DrawLine(new Line
+            {
+                X1 = _imageSideLength / 4 * 3,
+                Y1 = _imageSideLength / 3,
+                X2 = _imageSideLength / 12 * 7,
+                Y2 = _imageSideLength / 2
+            });
+
+            DrawLine(new Line
+            {
+                X1 = _imageSideLength / 12 * 7,
+                Y1 = _imageSideLength / 2,
+                X2 = _imageSideLength / 3 * 2,
+                Y2 = _imageSideLength / 2
+            });
+
+            DrawLine(new Line
+            {
+                X1 = _imageSideLength / 12 * 11,
+                Y1 = _imageSideLength / 2,
+                X2 = _imageSideLength / 6 * 5,
+                Y2 = _imageSideLength / 2
             });
         }
 

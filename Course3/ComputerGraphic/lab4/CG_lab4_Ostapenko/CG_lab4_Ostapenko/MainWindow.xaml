@@ -16,7 +16,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <Label Height="30" VerticalAlignment="Center" Margin="5">Разрешение картинки:</Label>
             <TextBox Margin="5" Width="50" Height="30" x:Name="ResolutionTextBox"/>
-            <Button x:Name="CreateFigureButton" Height="30" Margin="5" Padding="2" Click="CreateFigureButton_Click">Создать</Button>
+            <Button x:Name="CreateFigureButton" Height="30" Margin="5" Padding="2" Click="CreateFigureButton_Click" IsDefault="True">Создать</Button>
         </StackPanel>
     </Grid>
 </Window>
