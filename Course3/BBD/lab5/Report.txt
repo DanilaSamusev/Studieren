@@ -1,0 +1,36 @@
+
+Activity Name: { NO ACTIVITY }
+Arrow Name: DevOps инженеры
+Entity Name: Пользователи
+
+Arrow Name: Категория задачи
+Entity Name: Категории
+Attribute Name: ИмяКатегории
+
+Arrow Name: Менеджеры
+Entity Name: Пользователи
+
+Arrow Name: Новые задачи
+Entity Name: Задачи
+
+Entity Name: Категории
+
+Entity Name: Приложения
+
+Entity Name: Состояния
+
+Entity Name: Срочности
+
+Arrow Name: Разработчики
+Entity Name: Пользователи
+
+Arrow Name: Состояние задачи
+Entity Name: Состояния
+Attribute Name: ИмяСостояния
+
+Arrow Name: Срочность задачи
+Entity Name: Срочности
+Attribute Name: ИмяСрочности
+
+Arrow Name: Тестировщики
+Entity Name: Пользователи
