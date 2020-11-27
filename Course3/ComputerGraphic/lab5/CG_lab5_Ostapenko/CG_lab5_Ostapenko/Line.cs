@@ -1,6 +1,6 @@
 ﻿namespace CG_lab5_Ostapenko
 {
-    class Line
+    public class Line
     {
         public double X1 { get; set; }
         public double Y1 { get; set; }
