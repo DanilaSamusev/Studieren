@@ -1,0 +1,91 @@
+     *** ERwin IMPORT DIFFERENCES REPORT ***
+
+Added NEW ENTITY Пользователи
+Added NEW ENTITY Роли
+Added NEW ENTITY Голосования
+Added NEW ENTITY Спортивные события
+Added NEW ENTITY Команды
+Added NEW ENTITY Виды спорта
+Added NEW ENTITY Голоса пользователей
+Added NEW ENTITY Персональные данные
+Added NEW ENTITY Новостные записи
+ADDED ATTRIBUTE:  КодПользователя
+   To Entity:  Пользователи
+ADDED ATTRIBUTE:  КодРоли
+   To Entity:  Пользователи
+ADDED ATTRIBUTE:  КодПерсональныхДанных
+   To Entity:  Пользователи
+ADDED ATTRIBUTE:  ИмяПользователя
+   To Entity:  Пользователи
+ADDED ATTRIBUTE:  ПарольПользователя
+   To Entity:  Пользователи
+ADDED ATTRIBUTE:  КодРоли
+   To Entity:  Роли
+ADDED ATTRIBUTE:  ИмяРоли
+   To Entity:  Роли
+ADDED ATTRIBUTE:  КодГолосования
+   To Entity:  Голосования
+ADDED ATTRIBUTE:  КодСпортивногоСобытия
+   To Entity:  Голосования
+ADDED ATTRIBUTE:  КодВидаСпорта
+   To Entity:  Голосования
+ADDED ATTRIBUTE:  КодРоли
+   To Entity:  Голосования
+ADDED ATTRIBUTE:  КодПользователя
+   To Entity:  Голосования
+ADDED ATTRIBUTE:  КодПерсональныхДанных
+   To Entity:  Голосования
+ADDED ATTRIBUTE:  КодСпортивногоСобытия
+   To Entity:  Спортивные события
+ADDED ATTRIBUTE:  КодВидаСпорта
+   To Entity:  Спортивные события
+ADDED ATTRIBUTE:  ИмяСпортивногоСобытия
+   To Entity:  Спортивные события
+ADDED ATTRIBUTE:  ДатаСпортивногоСобытия
+   To Entity:  Спортивные события
+ADDED ATTRIBUTE:  МестоСпортивногоСобытия
+   To Entity:  Спортивные события
+ADDED ATTRIBUTE:  РезультатСпортивногоСобытия
+   To Entity:  Спортивные события
+ADDED ATTRIBUTE:  КодКоманды
+   To Entity:  Команды
+ADDED ATTRIBUTE:  ИмяКоманды
+   To Entity:  Команды
+ADDED ATTRIBUTE:  КодВидаСпорта
+   To Entity:  Виды спорта
+ADDED ATTRIBUTE:  ИмяВидаСпорта
+   To Entity:  Виды спорта
+ADDED ATTRIBUTE:  КодГолосаПользователя
+   To Entity:  Голоса пользователей
+ADDED ATTRIBUTE:  КодРоли
+   To Entity:  Голоса пользователей
+ADDED ATTRIBUTE:  КодГолосования
+   To Entity:  Голоса пользователей
+ADDED ATTRIBUTE:  КодПользователя
+   To Entity:  Голоса пользователей
+ADDED ATTRIBUTE:  КодПерсональныхДанных
+   To Entity:  Голоса пользователей
+ADDED ATTRIBUTE:  ВыбранныйРезультатСобытия
+   To Entity:  Голоса пользователей
+ADDED ATTRIBUTE:  КодПерсональныхДанных
+   To Entity:  Персональные данные
+ADDED ATTRIBUTE:  ФИОПользователя
+   To Entity:  Персональные данные
+ADDED ATTRIBUTE:  НомерТелефонаПользователя
+   To Entity:  Персональные данные
+ADDED ATTRIBUTE:  ПочтаПользователя
+   To Entity:  Персональные данные
+ADDED ATTRIBUTE:  КодНовостнойЗаписи
+   To Entity:  Новостные записи
+ADDED ATTRIBUTE:  ИмяНовостнойЗаписи
+   To Entity:  Новостные записи
+ADDED ATTRIBUTE:  ТекстНовостнойЗаписи
+   To Entity:  Новостные записи
+ADDED ATTRIBUTE:  КодПользователя
+   To Entity:  Новостные записи
+ADDED ATTRIBUTE:  КодРоли
+   To Entity:  Новостные записи
+ADDED ATTRIBUTE:  КодПерсональныхДанных
+   To Entity:  Новостные записи
+ADDED ATTRIBUTE:  КодГолосования
+   To Entity:  Новостные записи
