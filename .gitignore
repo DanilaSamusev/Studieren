@@ -308,3 +308,9 @@ Source/WebUI/bower_components/
 Source/WebUI/build/
 Source/WebUI/node_modules/
 Source/WebUI/src/shared/generated
+/Course3/Semester6/AiPRP/lab0/AiPRP_lab0_Ostapenko/nbproject/private/
+/Course3/Semester6/AiPRP/lab0/AiPRP_lab0_Ostapenko/build/
+
+# Java
+*.iml
+*.class
