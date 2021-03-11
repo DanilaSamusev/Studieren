@@ -1,0 +1,14 @@
+﻿<Window x:Class="HTML_Parser.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HTML_Parser.UI"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="270" Width="290">
+    <StackPanel>
+        <TextBox Name="Words" Margin="25" Width="200" Height="120" Background="White" TextWrapping="Wrap"/>
+        <Button Click="Button_Click" Content="Search" Height="20" Width="80"></Button>
+    </StackPanel>
+</Window>
