@@ -27,7 +27,7 @@ namespace WebServiceApp.Server
 		public void ConfigureServices(IServiceCollection services)
 		{
 
-			services.AddControllers();
+			services.AddControllersWithViews();
 			services.AddSwaggerGen(c =>
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebServiceApp.Server", Version = "v1" });
@@ -47,8 +47,6 @@ namespace WebServiceApp.Server
 			app.UseHttpsRedirection();
 
 			app.UseRouting();
-
-			app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{
