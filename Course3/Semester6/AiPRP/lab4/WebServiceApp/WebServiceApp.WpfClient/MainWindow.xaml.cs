@@ -17,10 +17,8 @@ namespace WebServiceApp.WpfClient
             var webRequest = WebRequest.Create("https://localhost:44327/api/WebService/getAll");
             string[] fileNames = { "" };
 
-            // Send the http request and wait for the response
             var responseStream = webRequest.GetResponse().GetResponseStream();
 
-            // Displays the response stream text
             if (responseStream != null)
             {
                 using (var streamReader = new StreamReader(responseStream))
@@ -37,8 +35,12 @@ namespace WebServiceApp.WpfClient
             string selectedFileName = FilesNamesList.SelectedItem.ToString();
             int selectedFileIndex = FilesNamesList.SelectedIndex;
 
-            using var client = new WebClient();
-			client.DownloadFile("https://localhost:44327/api/WebService/" + selectedFileIndex, selectedFileName);
+            var userResult = MessageBox.Show($"Скачать файл {selectedFileName}?", "Подтвердите действие", MessageBoxButton.YesNo);
+            if (userResult == MessageBoxResult.Yes)
+			{
+                using var client = new WebClient();
+                client.DownloadFile("https://localhost:44327/api/WebService/" + selectedFileIndex, selectedFileName);
+            }
 		}
 	}
 }
