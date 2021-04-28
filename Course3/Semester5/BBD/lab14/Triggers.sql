@@ -10,6 +10,15 @@ SET UrgencyId = UrgencyId - 1
 WHERE Id = (SELECT Id FROM inserted);
 
 GO
+CREATE TRIGGER Attachements_DELETE
+ON dbo.Tasks
+AFTER INSERT
+AS
+UPDATE dbo.Tasks
+SET UrgencyId = UrgencyId - 1
+WHERE Id = (SELECT Id FROM inserted);
+
+GO
 CREATE TRIGGER Tasks_DELETE
 ON dbo.Tasks
 AFTER DELETE
@@ -43,6 +52,15 @@ WHERE Id = (SELECT Id FROM inserted);
 
 GO
 CREATE TRIGGER Feedbacks_INSERT
+ON dbo.Feedbacks
+AFTER INSERT
+AS
+UPDATE dbo.Feedbacks
+SET Text = Text + ': ' + Rate
+WHERE Id = (SELECT Id FROM inserted);
+
+GO
+CREATE TRIGGER Feedbacks_DELETE
 ON dbo.Feedbacks
 AFTER INSERT
 AS
