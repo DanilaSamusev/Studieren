@@ -1,11 +1,91 @@
 USE OstapenkoBBD;
 
-GRANT ALL ON Голосования TO Victor;
+CREATE LOGIN Admin
+WITH PASSWORD = 'Admin';
+GO
 
-GRANT SELECT ON Голосования TO PUBLIC;
+CREATE LOGIN Moderator
+WITH PASSWORD = 'Moderator';
+GO
 
-GRANT DELETE ON Пользователи TO Victor;
+CREATE LOGIN Organizer
+WITH PASSWORD = 'Organizer';
+GO
 
-DENY All ON Роли TO Victor;
+CREATE LOGIN User1
+WITH PASSWORD = 'User1';
+GO
 
-REVOKE ALL ON Команды TO PUBLIC;
+CREATE USER Admin FOR LOGIN Admin;
+GO
+CREATE USER Moderator FOR LOGIN Moderator;
+GO
+CREATE USER Organizer FOR LOGIN Organizer;
+GO
+CREATE USER User1 FOR LOGIN User1;
+GO
+
+-- Admin
+GRANT SELECT, INSERT, UPDATE, DELETE ON [Votings] TO Admin
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [Users] TO Admin
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [PersonalData] TO Admin
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [NewsEntries] TO Admin
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [Sports] TO Admin
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [SportsEvents] TO Admin
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [Teams] TO Admin
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [TeamsInSportEvent] TO Admin
+GO
+
+-- Moderator
+GRANT SELECT ON [Votings] TO Moderator
+GO
+GRANT SELECT ON [Users] TO Moderator
+GO
+GRANT SELECT ON [PersonalData] TO Moderator
+GO
+GRANT SELECT ON [NewsEntries] TO Moderator
+GO
+GRANT SELECT ON [Sports] TO Moderator
+GO
+GRANT SELECT ON [SportsEvents] TO Moderator
+GO
+GRANT SELECT ON [Teams] TO Moderator
+GO
+GRANT SELECT ON [TeamsInSportEvent] TO Moderator
+GO
+
+-- Organizer
+GRANT SELECT, INSERT, UPDATE, DELETE ON [Votings] TO Organizer
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [NewsEntries] TO Organizer
+GO
+GRANT SELECT, INSERT ON [Sports] TO Organizer
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [SportsEvents] TO Organizer
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [Teams] TO Organizer
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE ON [TeamsInSportEvent] TO Organizer
+GO
+
+-- User1
+GRANT SELECT ON [Votings] TO User1
+GO
+GRANT SELECT ON [NewsEntries] TO User1
+GO
+GRANT SELECT ON [Sports] TO User1
+GO
+GRANT SELECT ON [SportsEvents] TO User1
+GO
+GRANT SELECT ON [Teams] TO User1
+GO
+GRANT SELECT ON [TeamsInSportEvent] TO User1
+GO
+
