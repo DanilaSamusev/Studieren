@@ -1,0 +1,112 @@
+﻿<Window x:Class="SSP_lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSP_lab2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="226" Width="737">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.RowSpan="3"
+            Orientation="Vertical">
+            <Label>Последние документы</Label>
+            <Label>1.txt</Label>
+            <Label>2.txt</Label>
+            <Label>3.txt</Label>
+            <Label>4.txt</Label>
+            <Label>5.txt</Label>
+            <Label>6.txt</Label>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Orientation="Horizontal">
+            <Button Margin="5" Click="Button_Click">Открыть</Button>
+            <Button Margin="5">Сохранить</Button>
+            <Button Margin="5">Закрыть</Button>
+            <Button Margin="5">Обработать</Button>
+            <Button Margin="5">О программе</Button>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Orientation="Horizontal">
+            <Label>1.txt</Label>
+            <Label>2.txt</Label>
+            <Label>3.txt</Label>
+        </StackPanel>
+
+        <WrapPanel
+                Grid.Row="2"
+                Grid.Column="1"
+                Orientation="Horizontal">
+            <Label
+                Width="75"
+                Height="75"
+                Margin="10"
+                Background="Yellow"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                A
+            </Label>
+            <Label
+                Width="75"
+                Height="75"
+                Margin="10"
+                Background="Red"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                B
+            </Label>
+            <Label
+                Width="75"
+                Height="75"
+                Margin="10"
+                Background="Green"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                C
+            </Label>
+            <Label
+                Width="75"
+                Height="75"
+                Margin="10"
+                Background="Blue"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                D
+            </Label>
+            <Label
+                Width="75"
+                Height="75"
+                Margin="10"
+                Background="Gray"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                E
+            </Label>
+            <Label
+                Width="75"
+                Height="75"
+                Margin="10"
+                Background="Wheat"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center">
+                F
+            </Label>
+        </WrapPanel>
+    </Grid>
+</Window>
