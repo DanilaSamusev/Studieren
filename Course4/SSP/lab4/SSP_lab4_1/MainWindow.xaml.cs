@@ -62,7 +62,7 @@ namespace SSP_lab4_1
 
         private void DeveloperInfoMenu_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Developer: d.sita", "info");
+            MessageBox.Show("Developer: dev", "info");
         }
     }
 }
