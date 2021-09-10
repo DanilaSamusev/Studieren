@@ -1,0 +1,39 @@
+﻿<Window x:Class="SSP_lab3_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Menu">
+                <MenuItem Header="Change Color" Name="ChangeColorMenu" MouseEnter="ChangeColor_MouseEnter" MouseLeave="Clear_Status">
+                    <MenuItem Header="Blue" Click="Blue_Click"></MenuItem>
+                    <MenuItem Header="White" Click="White_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Developer Info" Name="DeveloperInfoMenu" MouseEnter="DeveloperInfo_MouseEnter" MouseLeave="Clear_Status" Click="DeveloperInfoMenu_Click"></MenuItem>
+                <MenuItem Header="Exit" Name="ExitMenu" MouseEnter="Exit_MouseEnter" MouseLeave="Clear_Status" Click="ExitMenu_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <ToolBar Margin="53,0,0,0">
+            <Separator></Separator>
+            <ComboBox SelectedIndex="1" x:Name="ChangeColorTool" MouseEnter="ChangeColor_MouseEnter" MouseLeave="Clear_Status">
+                <ComboBoxItem Selected="Blue_Click">Blue</ComboBoxItem>
+                <ComboBoxItem Selected="White_Click">White</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="DeveloperInfoTool" MouseEnter="DeveloperInfo_MouseEnter" MouseLeave="Clear_Status" Click="DeveloperInfoMenu_Click">Developer Info</Button>
+            <Button x:Name="ExitTool" MouseEnter="Exit_MouseEnter" MouseLeave="Clear_Status" Click="ExitMenu_Click">Exit</Button>
+        </ToolBar>
+
+        <StatusBar DockPanel.Dock="Bottom" Margin="0,355,0,0" Grid.Row="1">
+            <TextBlock x:Name="StatusBarText"/>
+        </StatusBar>
+    </Grid>
+</Window>
