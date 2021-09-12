@@ -1,0 +1,102 @@
+﻿<Window x:Class="lab6_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab6_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+
+        <Style TargetType="TextBox">
+
+            <Setter Property="AcceptsReturn" Value="True"/>
+
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="Lavender" Offset="0" />
+                            <GradientStop Color="LightBlue" Offset="0.5" />
+                            <GradientStop Color="AntiqueWhite" Offset="1" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+        <Style x:Key="AncestorButtonStyle" TargetType="Button">
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontWeight" Value="Black"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="BorderThickness" Value="5"/>
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+        <Style x:Key="ButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource AncestorButtonStyle}">
+
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=ButtonStyleSelector, Path=SelectedIndex}" 
+                             Value="0">
+                    <Setter Property="FontStyle" Value="Italic"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=ButtonStyleSelector, Path=SelectedIndex}" 
+                             Value="1">
+                    <Setter Property="FontSize" Value="20"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=ButtonStyleSelector, Path=SelectedIndex}" 
+                             Value="2">
+                    <Setter Property="Foreground" Value="Red"/>
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+
+        <Style x:Key="CloseButton"
+               TargetType="Button"
+               BasedOn="{StaticResource ButtonStyle}">
+
+            <Setter Property="IsEnabled" Value="False"/>
+
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding ElementName=Text1, Path=Text}" Value=""/>
+                        <Condition Binding="{Binding ElementName=Text2, Path=Text}" Value=""/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="IsEnabled" Value="True" />
+                </MultiDataTrigger>
+            </Style.Triggers>
+
+        </Style>
+
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBox Name="Text1"/>
+        <TextBox Name="Text2"/>
+
+        <StackPanel Orientation="Horizontal">
+
+            <Button Style="{StaticResource ButtonStyle}">Открыть</Button>
+            <Button Style="{StaticResource ButtonStyle}">Очистить</Button>
+            <Button Style="{StaticResource CloseButton}">Закрыть</Button>
+
+            <ComboBox Name="ButtonStyleSelector">
+                <TextBlock>Тип</TextBlock>
+                <TextBlock>Размер</TextBlock>
+                <TextBlock>Цвет</TextBlock>
+            </ComboBox>
+
+        </StackPanel>
+
+    </StackPanel>
+</Window>
