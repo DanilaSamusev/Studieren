@@ -1,0 +1,26 @@
+<Viewbox Width="600" Height="600" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Canvas Height="100" Width="100">
+    <Canvas.RenderTransform>
+      <TransformGroup>
+        <TranslateTransform X="0" Y="-452.36218" />
+      </TransformGroup>
+    </Canvas.RenderTransform>
+    <Path Canvas.Left="-87.720657" Canvas.Top="432.25998" Width="44.214084" Height="58.930744" Data="m -65.613615,432.25998 c 0,16.27327 -9.89766,29.46537 -22.107042,29.46537 -12.209383,0 -22.107043,-13.1921 -22.107043,-29.46537 0,-16.27328 9.89766,-29.46537 22.107043,-29.46537 12.209382,0 22.107042,13.19209 22.107042,29.46537 z">
+      <Path.RenderTransform>
+        <MatrixTransform Matrix="13.570336,0,0,10.181443,1490.3988,-3648.6681" />
+      </Path.RenderTransform>
+    </Path>
+    <Path Data="m -65.613615,432.25998 c 0,16.27327 -9.89766,29.46537 -22.107042,29.46537 -12.209383,0 -22.107043,-13.1921 -22.107043,-29.46537 0,-16.27328 9.89766,-29.46537 22.107043,-29.46537 12.209382,0 22.107042,13.19209 22.107042,29.46537 z" Height="58.930744" Width="44.214084" Canvas.Top="432.25998" Canvas.Left="-87.720657">
+      <Path.RenderTransform>
+        <MatrixTransform Matrix="13.525102,0,0,10.147505,1486.4308,-3633.998" />
+      </Path.RenderTransform>
+    </Path>
+    <Path Data="M 300 20 C 145.36027 20 20 145.36027 20 300 C 20 454.63973 145.36027 580 300 580 C 454.63973 580 580 454.63973 580 300 C 580 145.36027 454.63973 20 300 20 z M 103.0625 241.9375 L 496.9375 241.9375 C 502.29879 241.9375 506.625 246.26371 506.625 251.625 L 506.625 348.375 C 506.625 353.73629 502.29879 358.0625 496.9375 358.0625 L 103.0625 358.0625 C 97.70121 358.0625 93.375 353.73629 93.375 348.375 L 93.375 251.625 C 93.375 246.26371 97.70121 241.9375 103.0625 241.9375 z ">
+      <Path.RenderTransform>
+        <TransformGroup>
+          <TranslateTransform X="0" Y="452.36218" />
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+  </Canvas>
+</Viewbox>

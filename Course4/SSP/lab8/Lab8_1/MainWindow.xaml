@@ -1,0 +1,34 @@
+﻿<Window x:Class="Lab8_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0">
+            <StackPanel Width="100">
+                <TextBox x:Name="t1" Text="{Binding ElementName=t2, Path=Text}"/>
+                <TextBox x:Name="t2" Text="{Binding ElementName=t1, Path=Text}" />
+                <Slider x:Name="slider1" />
+                <Slider x:Name="slider2" Value="{Binding ElementName=slider1, Path=Value}" />
+                <StackPanel Margin="0 20 0 0">
+                    <TextBox x:Name="t3" Text="{Binding ElementName=slider3, Path=Value}" />
+                    <Slider Minimum="10" Maximum="50" x:Name="slider3" Value="{Binding ElementName=t3, Path=Text}" />
+                    <TextBlock x:Name="text" FontSize="{Binding ElementName=t3, Path=Text}">
+                    Text
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <Canvas.RenderTransform>
+                <ScaleTransform x:Name="scaleTransform"/>
+            </Canvas.RenderTransform>
+        </Canvas>
+        <Slider Grid.Row="1" VerticalAlignment="Bottom" Value="0" Minimum="1" Maximum="10" ValueChanged="Slider_ValueChanged"></Slider>
+    </Grid>
+</Window>
