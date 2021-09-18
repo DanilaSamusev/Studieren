@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab2</title>
+</head>
+<body>
+<div id="text"></div>
+<script>
+  let alphabet = Array.from({length: 26}, (_, i) => i + 97).map(item => String.fromCharCode(item)).join("");
+
+  const indexes = [5, 7, 9, 12, 14, 17];
+  const separator = "-7-";
+  const filteredLetters = Array.from(alphabet).filter(letter => indexes.includes(alphabet.indexOf(letter) + 1))
+  window.alert(filteredLetters.join(separator));
+
+  const symbolsNumbers = ["05", "07", "09", "12", "14", "17"].join("");
+  let numbers = Array();
+  for (let i = 0; i < symbolsNumbers.length; i += 3) {
+    numbers.push(parseInt(symbolsNumbers.substring(i, i + 3)));
+  }
+
+  const result = `${numbers[0]} * ${numbers[1]} + ${numbers[2]} - ${numbers[3]}`;
+
+  window.alert(`${result} = ${eval(result)}`);
+
+  const textElement = document.getElementById("text");
+
+  let text = [];
+  for (let j = 0; j < 100; j++) {
+    text.push(filteredLetters[parseInt(Math.random() * 6)]);
+  }
+  textElement.innerHTML = text.join("");
+
+  const answer = window.confirm("Yes?");
+  const y = (indexes[0] - indexes[1]/ indexes[0])/indexes[2] ** 2
+  const f =  indexes[3]/(indexes[5] * indexes[4] + 2 * indexes[3]) - indexes[3]
+  if (answer) {
+    document.writeln(`<p>y = ${y}</p>`)
+  } else {
+    document.writeln(`<p>f = ${f}</p>`)
+  }
+</script>
+</body>
+</html>

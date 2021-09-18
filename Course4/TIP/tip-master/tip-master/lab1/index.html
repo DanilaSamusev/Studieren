@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Lab1</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .menu__nav {
+            background-color: indigo;
+            color: tan;
+            border-radius: 10px;
+
+            font-family: 'Lexend', sans-serif;
+            font-weight: 700;
+
+            margin: 20px 0 0 12px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .menu__nav a {
+            text-decoration: none;
+        }
+
+        .menu__nav a:visited {
+            color: inherit;
+        }
+
+        .menu__nav li {
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        .menu__nav :not(:first-child) ul {
+            position: absolute;
+            display: none;
+        }
+
+        .menu__nav :not(:first-child) {
+            border-radius: 10px;
+            flex-grow: 0;
+            width: 40%;
+        }
+
+        .menu__nav--types ul {
+            background-color: violet;
+            color: blue;
+        }
+
+        .menu__nav--affilates ul {
+            background-color: purple;
+            color: navy;
+        }
+
+        .menu__nav :not(:first-child):hover ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <ul class="menu__nav">
+        <li class="menu__logo">
+            <img class="menu__logo--img" width="50px" src="repair.png">
+        </li>
+        <li class="menu__nav--types">
+            <a href="">
+                Виды ремонта
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        Ремонт на дому
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Ремонт на месте
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Ремонт на выезд
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu__nav--affilates">
+            <a href="">
+                Филиалы
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        Могилев
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Минск
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
