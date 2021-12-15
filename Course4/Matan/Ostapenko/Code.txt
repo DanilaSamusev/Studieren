@@ -1,0 +1,50 @@
+# Тест Шапиро–Уилка
+
+#  Нормальное распределение
+set.seed(0)
+shapiro.test(rnorm(100, mean = 2, sd = 5))
+
+#  Равномерное распределение
+set.seed(0)
+shapiro.test(runif(100, min = -10, max = 10))
+
+#  Распределение высот деревьев
+colnames(trees)
+x <- trees[, "Height"]
+shapiro.test(x)
+
+
+# Критерий Колмогорова–Смирнова
+colnames(randu)
+nrow(randu)
+attach(randu)
+ks.test(x, y)
+
+ks.test(x, z)
+
+ks.test(y, z)
+
+ks.test(x, punif)
+detach(randu)
+
+
+# Критерий согласия χ2 Пирсона
+
+#  Монета
+chisq.test(c(2048, 1992))
+
+#  Студенты
+male <- HairEyeColor[, , "Male"]
+male
+mosaicplot(male, col = c("brown", "blue", "red", "green"))
+chisq.test(male, simulate.p.value = TRUE)
+
+female <- HairEyeColor[, , "Female"]
+female
+mosaicplot(female, col = c("brown", "blue", "red", "green"))
+chisq.test(female, simulate.p.value = TRUE)
+
+
+# t-тест Стьюдента
+light <- morley[, "Speed"]
+t.test(light - 792.458)
