@@ -33,4 +33,6 @@
 {5,cd45b6e0-921a-429c-ae81-abb819fa45a7,"Catalog.Склады",4},
 {5,51524228-84c3-45fa-8d28-b15b2d420493,"Document.ПриходнаяНакладная",5},
 {4,"_$Data$_.Post",17},
-{5,01f799ec-74e5-4d5d-af63-67e6eaef19ff,"Document.ОказаниеУслуги",6}
+{5,01f799ec-74e5-4d5d-af63-67e6eaef19ff,"Document.ОказаниеУслуги",6},
+{4,"_$PerformError$_",18},
+{5,79d31f83-e77c-4517-aaaf-a64bd54731c1,"InformationRegister.Цены",7}
