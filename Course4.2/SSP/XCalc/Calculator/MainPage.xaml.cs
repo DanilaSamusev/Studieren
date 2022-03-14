@@ -10,7 +10,7 @@ namespace Calculator
 		string mathOperator;
 		double firstNumber, secondNumber;
 
-        public MainPage ()
+        public MainPage()
         {
             InitializeComponent ();
             OnClear(this, null);
